@@ -8,7 +8,7 @@
         :root {
             --primary: #1a365d;
             --secondary: #2d3748;
-            --accent: #3182ce;
+            --accent: #04208d;
             --bg: #f7fafc;
             --text: #2d3748;
         }
@@ -76,10 +76,10 @@
 
     <section>
         <h2>2. Who We Are</h2>
-        <p>Nexora Education Labs is the developer and operator of the Nexora school management platform. We provide the App as a service to educational institutions ("Schools"). Each School is a separate client with its own isolated data environment.</p>
+        <p>Nexora Education Labs is the developer and operator of the Nexora school management platform. We provide the App as a service to educational institutions (referred to as "Schools" or "Clients"). Each School that uses our App is a separate client with its own isolated data environment.</p>
         <div class="contact-box">
-            <strong>Developer:</strong> Madhav Panwar<br>
-            <strong>Email:</strong> nexoraeducationlabs@gmail.com[cite: 1]
+            <strong>Developer:</strong> Nexora Education Labs<br>
+            <strong>Email:</strong> nexoraeducationlabs@gmail.com
         </div>
     </section>
 
@@ -87,45 +87,91 @@
         <h2>3. Information We Collect</h2>
         <h3>3.1 Provided by Schools</h3>
         <ul>
-            <li><strong>Student info:</strong> Name, class, roll number, admission year[cite: 1].</li>
-            <li><strong>Parent info:</strong> Names and contact phone numbers[cite: 1].</li>
-            <li><strong>Staff info:</strong> Name, title, class assigned, phone/email[cite: 1].</li>
-            <li><strong>Academic data:</strong> Timetables, attendance, assignments, and exam results[cite: 1].</li>
+            <li><strong>Student info:</strong> Name, class, roll number, admission year.</li>
+            <li><strong>Parent info:</strong> Names and contact phone numbers.</li>
+            <li><strong>Staff info:</strong> Name, title, class assigned, phone/email</li>
+            <li><strong>Academic data:</strong> Timetables, attendance, assignments, and exam results.</li>
         </ul>
         <h3>3.2 Provided by Users</h3>
         <ul>
-            <li>Login credentials managed via Firebase Authentication[cite: 1].</li>
-            <li>Appointment and support requests[cite: 1].</li>
+            <li>Login credentials (email and password managed via Firebase Authentication)</li>
+            <li>Appointment and support requests.</li>
         </ul>
         <h3>3.3 Collected Automatically</h3>
-        <p>We use Firebase for authentication tokens, session data, analytics, and crash reports to improve app performance[cite: 1].</p>
+        <li>Firebase Authentication tokens and session data</li>
+        <li>Device information and app usage data collected by Firebase Analytics (if enabled)</li>
+        <li>Crash reports via Firebase Crashlytics (if enabled)</li>
     </section>
 
     <section>
         <h2>4. How We Use Information</h2>
-        <p>We use data solely to provide core functionality: attendance tracking, academic records, assignments, and communication between school and parents[cite: 1]. <strong>We do not use your data for advertising or commercial profiling[cite: 1].</strong></p>
+        <li>We use the collected information solely for the following purposes:</li>
+        <li>To provide core app functionality — attendance tracking, academic records, assignments, exam scheduling, results, notices, and communication between school and parents</li>
+        <li>To authenticate users and manage role-based access (student, parent, teacher, coordinator, exam department, admin)</li>
+        <li>To allow school administrators to manage staff and student records</li>
+        <li>To enable parents to view their child's attendance, academic progress, and communicate with the school</li>
+        <li>To maintain the security and integrity of the platform</li>
+        <li>To improve app performance and fix technical issues</li>
+        <li>We do not use your data for advertising, marketing, or any commercial profiling purposes.</li>
     </section>
 
     <section>
         <h2>5. Data Storage and Security</h2>
-        <p>All data is stored securely on <strong>Google Firebase (Firestore)</strong> with industry-standard encryption[cite: 1]. Access is strictly enforced through role-based permissions and Firebase Security Rules[cite: 1].</p>
+        <p>All data is stored securely on <strong>Google Firebase (Firestore)</strong>,a cloud platform operated by Google LLC. Firebase provides industry-standard encryption for data in transit (TLS/SSL) and at rest.</p>
+        <p>Each school's data is logically isolated within our Firestore database. Users can only access data relevant to their role and their school. Access is enforced through Firebase Security Rules and Firebase Authentication.</p>
+        <p>We implement the following security measures:</p>
+        <p><strong>Role-based access control — </strong>students, parents, teachers, coordinators, exam department staff, and admins each have strictly defined permissions</p>
+        <p>Firestore Security Rules that prevent unauthorized read or write access</p>
+        <p>No sharing of one school's data with another school or any third party</p>
+        
     </section>
 
     <section>
         <h2>6. Data Sharing</h2>
-        <p>We do not sell or rent your information. We only share data with trusted services like Google Firebase required to operate the App[cite: 1].</p>
+        <p>We do not sell, trade, or rent your personal information to any third party. We use the following trusted third-party services to operate the App:</p>
+        <p><strong>Google Firebase (Firestore, Authentication, Storage) — </strong>for database, authentication, and file storage. Firebase is governed by Google's Privacy Policy (policies.google.com/privacy)</p>
+        <p>No other third parties have access to your data. We will only disclose data if required by law or a valid legal process.</p>
     </section>
 
     <section>
         <h2>7. Children's Privacy</h2>
-        <p>Student accounts are created exclusively by administrators. We do not collect unnecessary data from minors and only use information for educational management features[cite: 1].</p>
+        <p>The Nexora App is used within educational institutions and may be accessed by students who are minors. We take children's privacy seriously.</p>
+        <p>Student accounts are created exclusively by school administrators — students and parents cannot self-register. Student data is limited to academic and attendance information necessary for school management. We do not collect unnecessary personal data from minors, and we do not use student data for any purpose beyond providing the App's educational management features.</p>
+        <p>If you are a parent and believe your child's data is being handled inappropriately, please contact us immediately at nexoraeducationlabs@gmail.com.</p>
     </section>
 
     <section>
-        <h2>8. Your Rights</h2>
-        <p>Users have the right to access, correct, or request deletion of their data. To exercise these rights, contact your school administrator or us at nexoraeducationlabs@gmail.com[cite: 1].</p>
+        <h2>8. Data Retention</h2>
+        <p>Data is retained for the duration of the school's active subscription with Nexora Education Labs. Schools manage their own data and may request deletion at any time by contacting us.</p>
+        <p>When a school's account is terminated, all associated data will be permanently deleted from our systems within 30 days.</p>
+    </section>
+    
+    <section>
+        <h2>9. Your Rights</h2>
+        <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+        <ul>
+            <li><strong>Right to access:</strong> request a copy of the data we hold about you</li>
+            <li><strong>Right to correction:</strong> request correction of inaccurate data</li>
+            <li><strong>Right to deletion:</strong> request deletion of your data (subject to school administrator approval)</li>
+            <li><strong>Right to restrict processing:</strong> request that we limit how we use your data</li>
+        </ul>
     </section>
 
+    <section>
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected with an updated effective date at the top of this document. Continued use of the App after changes are posted constitutes acceptance of the revised policy.</p>
+        <p>For significant changes, we will notify school administrators directly.</p>
+    </section>
+
+    <section>
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact:</p>
+        <li><strong>Nexora Education Labs</strong></li>
+        <li>Email: nexoraeducationlabs@gmail.com</li>
+        <li>App: Nexora — School Management App</li>
+        
+    </section>
+    
     <div class="footer">
         &copy; 2026 Nexora Education Labs. All rights reserved.[cite: 1]
     </div>
